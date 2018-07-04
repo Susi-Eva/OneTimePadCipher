@@ -21,7 +21,7 @@ public class main {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the message: ");
+        System.out.println("Enter the message (Plain text): ");
         String message = sc.next();
         System.out.println("'" + message + "' in encrypted message : "
                 + encryptionMessage(message));
