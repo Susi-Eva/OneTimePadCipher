@@ -7,7 +7,10 @@ package OneTimePad;
 
 import static OneTimePad.OneTimePadCipher.decryptionMessage;
 import static OneTimePad.OneTimePadCipher.encryptionMessage;
+import static OneTimePad.OneTimePadCipher.setNewKey;
+import static OneTimePad.OneTimePadCipher.setNewPlainText;
 import java.util.Scanner;
+
 
 /**
  *
