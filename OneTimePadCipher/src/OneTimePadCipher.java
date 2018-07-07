@@ -12,6 +12,41 @@ import java.util.Scanner;
  * @author Susi Purba
  */
 public class OneTimePadCipher {
+     
+     public static String setNewKey(String s){
+        int len = s.length();
+        String x = "";
+        int index = 0;
+        
+        for (int i = len-1 ; i >= 0; i--){
+            char c = s.charAt(i);
+            int j = (int) c;
+            if(j % 2 == 0){
+                x += s.charAt(i);
+                index++;
+            }
+        }
+        return x;
+        
+    }
+    
+    
+    public static String setNewPlainText(String s){
+        int len = s.length();
+        String x = "";
+        int index = 0;
+        for (int i = 0; i < len; i++){
+            char c = s.charAt(i);
+            int j = (int) c;
+            if(j % 2 == 1){
+                x += s.charAt(i);
+                index++;
+            }
+        }
+        return x;
+    }
+    
+     
      public static String encryptionMessage(String s)
     {
         int i, j;
