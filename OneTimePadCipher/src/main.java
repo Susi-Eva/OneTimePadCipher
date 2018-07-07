@@ -21,13 +21,17 @@ public class main {
     public static void main(String[] args) {
         // TODO code application logic here
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the message: ");
+        System.out.println("Enter the message (Plain text): ");
         String message = sc.next();
+        System.out.println("Set new Plaintext: "+setNewPlainText(message));
+        String a = setNewPlainText(message);
+        String b = setNewKey(message);
+        System.out.println("Set Key: "+setNewKey(message));
         System.out.println("'" + message + "' in encrypted message : "
-                + encryptionMessage(message));
-        System.out.println("'" + encryptionMessage(message)
+                + encryptionMessage(a));
+        System.out.println("'" + encryptionMessage(a)
                 + "' in decrypted message : "
-                + decryptionMessage(encryptionMessage(message)));
+                + decryptionMessage(encryptionMessage(a)));
         sc.close();
     }
 }
